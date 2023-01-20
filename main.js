@@ -6,6 +6,9 @@ let primerResultado = null;
 let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
+let temporizador = false;
+let timer = 60;
+let tiempoRegresivoId = null;
 
 //apuntando a documentos HTML
 let mostrarMovimientos = document.getElementById("movimientos");
@@ -14,14 +17,35 @@ let mostrarAciertos = document.getElementById("aciertos");
 
 let numeros = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 
+let mostrarTiempo = document.getElementById("tiempoRestante")
 numeros = numeros.sort(() => {
   return Math.random() - 0.5;
 });
 console.log(numeros);
 
+//Funciones
+function contarTiempo(){
+  tiempoRegresivoId = setInterval(()=>{
+    timer--;
+    mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`; if(timer == 0){
+      clearInterval(tiempoRegresivoId);
+      alert("Game Over - Se acabó el tiempo 😭")
+  
+    }
+  }, 1000)
+  
+}
+
 // Funcion principal
 
 function destapar(id) {
+  if(temporizador == false){
+    contarTiempo();
+    temporizador = true;
+  }
+
+
+
   tarjetasDestapadas++;
   //   console.log(tarjetasDestapadas);
   if (tarjetasDestapadas == 1) {
