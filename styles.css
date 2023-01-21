@@ -23,6 +23,8 @@ main{
     background-color:rgba(36, 4, 46, 0.836);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
+    width: 500px;
+    height: 500px;
     
 }
 
@@ -31,20 +33,23 @@ h1{
 }
 
 button{
+    
     transition: 0.5s;
     border: none;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     background: rgb(84,7,161);
-background: radial-gradient(circle, rgba(84,7,161,0.5494572829131652) 45%, rgba(232,255,0,0.5466561624649859) 100%);
+    background: radial-gradient(circle, rgba(84,7,161,0.5494572829131652) 45%, rgba(232,255,0,0.5466561624649859) 100%);
 
 }
 
 button:hover{
     cursor: pointer;
-    height: 80px;  
-    width:  80px;  
+    background-image: url(./img/loading.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .section2{
