@@ -34,7 +34,7 @@ console.log(numeros);
 function contarTiempo(){
   tiempoRegresivoId = setInterval(()=>{
     timer++;
-    mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`; if(timer == 40){
+    mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`; if(timer == 60){
       clearInterval(tiempoRegresivoId);
       alert("Game Over - Se acabó el tiempo 😭")
       bloquearTarjetas(numeros);
@@ -95,15 +95,14 @@ function destapar(id) {
       aciertos++;
       mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
       correctAudio.play();
-
-
+s
       if(aciertos === 8){
         mostrarAciertos.innerHTML = `Aciertos: ${aciertos}😲 ` 
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}👏😎 `
         
         
-        winAudio.play();
-        alert("¡Has ganado!")
+        
+        alert("¡Has Ganado", winAudio.play())
       }
 
 
