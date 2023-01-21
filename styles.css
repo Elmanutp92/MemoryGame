@@ -23,6 +23,7 @@ main{
     background-color:rgba(36, 4, 46, 0.836);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
+    
 }
 
 h1{
@@ -93,3 +94,4 @@ img{
 footer{
     justify-content: right;
 }
+
