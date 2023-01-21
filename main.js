@@ -95,14 +95,16 @@ function destapar(id) {
       aciertos++;
       mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
       correctAudio.play();
-s
+
+
       if(aciertos === 8){
         mostrarAciertos.innerHTML = `Aciertos: ${aciertos}😲 ` 
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}👏😎 `
+        mostrarTiempo.innerHTML = `Tardaste: ${clearInterval(tiempoRegresivoId)} segundos`;
+        bloquearTarjetas(numeros);
         
-        
-        
-        alert("¡Has Ganado", winAudio.play())
+        winAudio.play()
+        alert("¡Has Ganado!")
       }
 
 
@@ -116,7 +118,7 @@ s
         tarjeta2.disabled = false;
         tarjetasDestapadas = 0;
         errorAudio.play();
-      }, 800);
+      }, 300);
     }
   }
 }
