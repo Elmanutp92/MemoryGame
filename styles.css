@@ -1,8 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/homer-simpson-revised');
+
 body{
     background: rgb(0,0,0);
 background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(183,89,245,1) 50%, rgba(1,12,14,1) 98%);
-font-family: sans-serif;
+font-family: 'Homer Simpson Revised', sans-serif;
 color: white;
+font-size: large;
+
+background-image: url(./los-simpsons_1920x1080_xtrafondos.com.jpg);
+background-size: cover;
+
 }
 
 main{
@@ -13,7 +20,7 @@ main{
 }
 
 .section1{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:rgba(36, 4, 46, 0.836);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
 }
@@ -36,7 +43,7 @@ button:hover{
 }
 
 .section2{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(36, 4, 46, 0.781);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     width: 250px;
@@ -59,3 +66,8 @@ footer{
 a{
     text-decoration: none;
 }
+
+img{
+    width: 90%;
+}
+
