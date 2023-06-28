@@ -31,6 +31,12 @@ numeros = numeros.sort(() => {
 console.log(numeros);
 
 //Funciones
+function
+ recargar() {
+  location.reload();
+ }
+
+
 function contarTiempo(){
   tiempoRegresivoId = setInterval(()=>{
     timer++;
@@ -100,11 +106,12 @@ function destapar(id) {
       if(aciertos === 8){
         mostrarAciertos.innerHTML = `Aciertos: ${aciertos}😲 ` 
         mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}👏😎 `
-        mostrarTiempo.innerHTML = `Tardaste: ${clearInterval(tiempoRegresivoId)} segundos`;
+        mostrarTiempo.innerHTML = `Tardaste: ${timer} segundos`;
+        clearInterval(tiempoRegresivoId);
         bloquearTarjetas(numeros);
         
         winAudio.play()
-        alert("¡Has Ganado!")
+       // alert("¡Has Ganado!")
       }
 
 
